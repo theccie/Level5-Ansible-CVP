@@ -1,0 +1,8 @@
+---
+CVP_DEVICES:
+  leaf1-DC1:
+    name: 'leaf1-DC1'
+    configlets:
+        - 'ATD-INFRA'
+        - 'leaf1-DC1-BASE'
+    imageBundle: []  # Not yet supported  
