@@ -1,7 +1,5 @@
----
-#CVP_CONFIGLETS:
-#  01TRAINING-alias: "alias a{{ 999 | random }} show version"
-#  01TRAINING-01: "alias a{{ 999 | random }} show version"
+CVP_CONFIGLETS:
+
 
 CVP_DEVICES:
   leaf1-DC1:
@@ -10,6 +8,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'leaf1-DC1-BASE'
+        - 'Ansible-MLAG-Left'
     imageBundle: []  # Not yet supported  
   leaf2-DC1:
     name: 'leaf2-DC1'
@@ -17,6 +16,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'leaf2-DC1-BASE'
+        - 'Ansible-MLAG-Right'
     imageBundle: []  # Not yet supported  
   leaf3-DC1:
     name: 'leaf3-DC1'
@@ -24,6 +24,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'leaf3-DC1-BASE'
+        - 'Ansible-MLAG-Left'
     imageBundle: []  # Not yet supported  
   leaf4-DC1:
     name: 'leaf4-DC1'
@@ -31,6 +32,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'leaf4-DC1-BASE'
+        - 'Ansible-MLAG-Right'
     imageBundle: []  # Not yet supported
   borderleaf1-DC1:
     name: 'borderleaf1-DC1'
@@ -38,6 +40,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'borderleaf1-DC1-BASE'
+        - 'Ansible-MLAG-Left'
     imageBundle: []  # Not yet supported  
   borderleaf2-DC1:
     name: 'borderleaf2-DC1'
@@ -45,6 +48,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'borderleaf2-DC1-BASE'
+        - 'Ansible-MLAG-Right'
     imageBundle: []  # Not yet supported      
   spine1-DC1:
     name: 'spine1-DC1'
@@ -73,6 +77,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'leaf1-DC2-BASE'
+        - 'Ansible-MLAG-Left'
     imageBundle: []  # Not yet supported  
   leaf2-DC2:
     name: 'leaf2-DC2'
@@ -80,6 +85,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'leaf2-DC2-BASE'
+        - 'Ansible-MLAG-Right'
     imageBundle: []  # Not yet supported  
   leaf3-DC2:
     name: 'leaf3-DC2'
@@ -87,6 +93,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'leaf3-DC2-BASE'
+        - 'Ansible-MLAG-Left'
     imageBundle: []  # Not yet supported  
   leaf4-DC2:
     name: 'leaf4-DC2'
@@ -94,6 +101,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'leaf4-DC2-BASE'
+        - 'Ansible-MLAG-Right'
     imageBundle: []  # Not yet supported
   borderleaf1-DC2:
     name: 'borderleaf1-DC2'
@@ -101,6 +109,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'borderleaf1-DC2-BASE'
+        - 'Ansible-MLAG-Left'
     imageBundle: []  # Not yet supported  
   borderleaf2-DC2:
     name: 'borderleaf2-DC2'
@@ -108,6 +117,7 @@ CVP_DEVICES:
     configlets:
         - 'ATD-INFRA'
         - 'borderleaf2-DC2-BASE'
+        - 'Ansible-MLAG-Right'
     imageBundle: []  # Not yet supported      
   spine1-DC2:
     name: 'spine1-DC2'

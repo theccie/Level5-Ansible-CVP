@@ -1,12 +1,13 @@
 ---
-- name: lab03 - cv_configlet lab
+- name: Upload file as configlet
   hosts: CloudVision
   connection: local
   gather_facts: no
   vars:
+    path: "{{lookup('env','PWD')}}"
     CVP_CONFIGLETS:
-     test_config_upload: "{{lookup('file','leaf1.cfg')}}"
-     TEAM01-another-configlet: "alias a2 show version"
+      test_config_upload: "{{lookup('file','{{path}}/configs/alias1.cfg')}}"
+      common_aliases: "{{lookup('file','{{path}}/configs/common_aliases.cfg')}}"
   tasks:
     - name: Push config to CVP
       arista.cvp.cv_configlet_v3:
